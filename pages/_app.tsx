@@ -9,7 +9,7 @@ import '@fontsource/jetbrains-mono/index.css';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NextNProgress height={2} color="#4A5568" options={{ showSpinner: false }} />
+      <NextNProgress height={2} color="RGBA(0, 0, 0, 0.64)" options={{ showSpinner: false }} />
       <ChakraProvider resetCSS={true} theme={customTheme}>
         <Component {...pageProps} />
       </ChakraProvider>

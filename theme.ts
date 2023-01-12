@@ -11,6 +11,20 @@ const customTheme = extendTheme({
     body: '-apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Pretendard, Roboto, Noto Sans KR, Segoe UI, Malgun Gothic, sans-serif',
     mono: 'JetBrains Mono, SFMono-Regular, Pretendard, Menlo, Consolas, PT Mono, Liberation Mono, Courier, monospace',
   },
+  colors: {
+    dark: {
+      50: "#FAFAFA",
+      100: "#F5F5F5",
+      200: "#EEEEEE",
+      300: "#E0E0E0",
+      400: "#BDBDBD",
+      500: "#9E9E9E",
+      600: "#757575",
+      700: "#616161",
+      800: "#424242",
+      900: "#212121",
+    },
+  },
   components: {
     Heading: {
       baseStyle: {
@@ -20,17 +34,17 @@ const customTheme = extendTheme({
     },
     Text: {
       baseStyle: {
-        color: 'gray.600',
+        color: 'dark.600',
         fontFamily: 'body',
         lineHeight: '1.75',
         transition: 'all 0.3s ease-in-out',
         '.chakra-ui-dark &': {
-          color: 'gray.200',
+          color: 'dark.200',
         },
       },
       variants: {
         navigation: {
-          color: 'gray.800',
+          color: 'dark.900',
           fontSize: '0.95rem',
           fontWeight: 'extrabold',
           opacity: '1',
@@ -44,7 +58,7 @@ const customTheme = extendTheme({
     },
     Link: {
       baseStyle: {
-        color: 'gray.800',
+        color: 'dark.800',
         fontFamily: 'body',
         textDecoration: 'none',
         transition: 'all 0.3s ease-in-out',
@@ -58,14 +72,22 @@ const customTheme = extendTheme({
       variants: {},
     },
   },
-  layerStyles: {},
+  layerStyles: {
+    cover: {
+      alignItems: 'center',
+      bg: 'blackAlpha.50',
+      '.chakra-ui-dark &': {
+        bg: 'whiteAlpha.50',
+      },
+    },
+  },
   styles: {
     global: {
       body: {
         bg: 'white',
       },
       '.chakra-ui-dark': {
-        bg: '#000',
+        bg: 'dark.900',
       },
       '*::selection': {
         background: 'blackAlpha.200',
@@ -75,7 +97,7 @@ const customTheme = extendTheme({
       },
     },
   },
-  shadows: { outline: '0 0 0 2px var(--chakra-colors-gray-500)' },
+  shadows: { outline: '0 0 0 2px var(--chakra-colors-blackAlpha-500)' },
 });
 
 export default customTheme;
